@@ -10,16 +10,17 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/result"
-            android:text="Результаты теста"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:fontFamily="@font/magnolia"
+            android:text="Результаты теста"
             android:textColor="#344C6C"
-            android:textStyle="bold"
             android:textSize="30sp"
-            android:layout_centerHorizontal="true"/>
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,13 +30,16 @@
             android:textColor="#486D9E"
             android:layout_marginLeft="10dp"
             android:textSize="19sp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <ProgressBar
             android:id="@+id/progress_bar"
+            android:layout_width="40dp"
+            android:layout_height="400dp"
             android:layout_below="@id/important"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"/>
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progress_bar_vertical" />
         <TextView
             android:id="@+id/result_info"
             android:layout_width="wrap_content"

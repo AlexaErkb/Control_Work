@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         if ((first_pulse.getText().toString().trim().length()==0) || (second_pulse.getText().toString().trim().length()==0)) {
 
         } else {
-            result = (int) (Math.random()*3);
+            result = (int) (Math.random()*101);
             Intent intent = new Intent(this, Result.class);
             intent.putExtra("result", String.valueOf(result));
             startActivity(intent);
