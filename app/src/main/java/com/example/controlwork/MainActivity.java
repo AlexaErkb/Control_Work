@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         selectYear.setClickable(false);
         selectMonth.setClickable(false);
         day.setOnTouchListener(this);
+        selectYear.setOnTouchListener(this);
+        selectMonth.setOnTouchListener(this);
         done.setOnClickListener(this);
     }
     @Override
