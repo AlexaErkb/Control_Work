@@ -12,6 +12,6 @@
 ![image](https://user-images.githubusercontent.com/70998859/139589687-7c97ddae-7632-4a8e-a122-e6605b55a754.png)  
 После того, как пользователь заполнил все поля, он может нажать кнопку ввод, если есть какие то пустые поля, то она не сработает.  
 Кнопка ввод переводит пользователя на другое Activity с результатами:  
-![image](https://user-images.githubusercontent.com/70998859/139589977-2f10c0a6-e412-403e-bc3e-3163b6f5fe11.png)  
-![image](https://user-images.githubusercontent.com/70998859/139589988-3adc7d63-7b52-4c2e-b413-181d5eb29257.png)  
-![image](https://user-images.githubusercontent.com/70998859/139589995-4c9b1739-06d2-4f26-b1b1-9c7b55246b19.png)  
+![image](https://user-images.githubusercontent.com/70998859/139594311-7fe2de01-276a-4574-8065-58868319906d.png)  
+![image](https://user-images.githubusercontent.com/70998859/139594318-83c2cea8-bc4f-4789-bcd6-b2031e2c9e13.png)  
+![image](https://user-images.githubusercontent.com/70998859/139594327-049efe89-b8d5-44ef-ae59-95eb6a1464e3.png)  
