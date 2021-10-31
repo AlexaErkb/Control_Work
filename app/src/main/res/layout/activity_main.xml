@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="#AAE8DD"
+    android:layout_height="fill_parent"
+    android:scrollbars="none">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#AAE8DD"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/magnolia"
+                android:text="Переутомление (Ортостатическая проба)"
+                android:textColor="#344C6C"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/warning"
+                android:layout_below="@id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/warning4"/>
+            <TextView
+                android:layout_below="@id/warning"
+                android:textSize="20sp"
+                android:textColor="#344C6C"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:id="@+id/test"
+                android:fontFamily="@font/magnolia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Тест"/>
+
+            <TextView
+                android:id="@+id/important"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@id/warning"
+                android:text="Для прохождения теста необходимо иметь возможность лечь на 5 минут. Время проведения теста около 10-15 минут"
+                android:textColor="#486D9E" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/birth"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/test"
+                android:textSize="20sp"
+                android:text="День вашего рождения"
+                android:textColor="#486D9E" />
+        </RelativeLayout>
+        <GridLayout
+            android:id="@+id/findbirth"
+            android:layout_below="@id/info"
+            android:rowCount="1"
+            android:columnCount="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:layout_column="0"
+                android:layout_row="0"
+                android:id="@+id/day"
+                android:backgroundTint="#69a89e"
+                style="@android:style/Widget.Spinner"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Spinner
+                android:id="@+id/month"
+                style="@android:style/Widget.Spinner"
+                android:layout_row="0"
+                android:backgroundTint="#69a89e"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="3" />
+            <Spinner
+                android:layout_column="2"
+                android:layout_row="0"
+                android:id="@+id/year"
+                android:backgroundTint="#69a89e"
+                style="@android:style/Widget.Spinner"
+                android:layout_columnWeight="2"
+                android:layout_rowWeight="1"/>
+        </GridLayout>
+        <TextView
+            android:id="@+id/mf"
+            android:textColor="#486D9E"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Пол:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/findbirth"/>
+
+        <Spinner
+            android:id="@+id/sexes"
+            style="@android:style/Widget.Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/findbirth"
+            android:layout_toRightOf="@id/mf"
+            android:backgroundTint="#69a89e" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/step1"
+            android:layout_below="@id/sexes"
+            android:text="1. Необходимо лечь и лежать 5 минут почти без движений."
+            android:textColor="#486D9E"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/step1"
+            android:textSize="16sp"
+            android:id="@+id/step2"
+            android:textColor="#486D9E"
+            android:layout_marginLeft="10dp"
+            android:text="2. Посчитать пульс в течение минуты."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="13dp"
+            android:textColor="#486D9E"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/step3"
+            android:layout_below="@id/step2"
+            android:text="3. Введите пульс в положении лежа: "/>
+
+        <EditText
+            android:id="@+id/first_pulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/step2"
+            android:layout_toRightOf="@id/step3"
+            android:backgroundTint="#69a89e"
+            android:inputType="number"
+            android:backgroundTintMode="add" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_below="@id/first_pulse"
+            android:textColor="#486D9E"
+            android:layout_marginLeft="10dp"
+            android:text="4. Встать и стоять почти без движений 5 минут."
+            android:id="@+id/step4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:id="@+id/step5"
+            android:text="5. Посчитать пульс в течение минуты"
+            android:textColor="#486D9E"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/step4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#486D9E"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/step6"
+            android:text="6. Введите пульс в положении стоя: "
+            android:layout_below="@id/step5"/>
+
+        <EditText
+            android:id="@+id/second_pulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/step5"
+            android:layout_toRightOf="@id/step6"
+            android:backgroundTint="#69a89e"
+            android:inputType="number"
+            android:backgroundTintMode="add" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:id="@+id/step7"
+            android:textColor="#486D9E"
+            android:layout_marginLeft="10dp"
+            android:text="@string/end"
+            android:layout_below="@id/step6"/>
+        <ImageView
+            android:id="@+id/clock"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/step7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clock"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ввод"
+            android:id="@+id/done"
+            android:layout_below="@id/clock"
+            android:backgroundTint="#79B1A8"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</ScrollView>

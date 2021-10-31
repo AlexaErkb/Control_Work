@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#AAE8DD"
+    android:layout_height="match_parent"
+    tools:context=".Result">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/result"
+            android:text="Результаты теста"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/magnolia"
+            android:textColor="#344C6C"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Не забывайте о регулярном профессиональном медицинском осмотре!"
+            android:id="@+id/important"
+            android:layout_below="@id/result"
+            android:textColor="#486D9E"
+            android:layout_marginLeft="10dp"
+            android:textSize="19sp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_bar"
+            android:layout_below="@id/important"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/result_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/important"
+            android:layout_toRightOf="@id/progress_bar"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#486D9E"/>
+        <ImageView
+            android:id="@+id/cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_info"
+            android:layout_toRightOf="@id/progress_bar"/>
+    </RelativeLayout>
+
+</ScrollView>
